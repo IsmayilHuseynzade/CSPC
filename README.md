@@ -14,11 +14,16 @@ conda activate cspc
 - (one or two lines)
 
 **Speed comparison (loop vs NumPy):**
-- loop : ... s
-- numpy : ... s
-- speed-up: ... x faster
+- loop : 1.8410 s
+- numpy : 0.0002 s
+- speed-up: 11813.5 x faster
+
+
+
 
 **Tests:** all passing? (yes / no)
+yes
 
 **Conclusion:**
-- (2-3 sentences: what worked, what you learned, any problems)
+Today i learned how to work with conda and how to use using git command like
+push,branch,add.Also i wrote test using pytest and saw how much numpy is faster
