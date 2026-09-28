@@ -30,6 +30,15 @@ a = np.gradient(v, t)
 #         (hint: cumulative_trapezoid(a, t, initial=0) + v[0], then again)
 
 print(f"Mean acceleration: {np.mean(a):.2f} m/s^2")
+print(f"Standard deviation: {np.std(a):.2f} m/s^2")
+
+
+v_recovered = cumulative_trapezoid(a, t, initial=0) + v[0]
+
+y_recovered = cumulative_trapezoid(v_recovered, t, initial=0) + y[0]
+
+max_diff = np.max(np.abs(y_recovered - y))
+print(f"Max difference: {max_diff:.2f} m")
 
 
 # TODO 4: make a figure with 3 stacked panels: position, velocity, acceleration
