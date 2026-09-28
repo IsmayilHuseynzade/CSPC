@@ -44,3 +44,24 @@ print(f"Max difference: {max_diff:.2f} m")
 # TODO 4: make a figure with 3 stacked panels: position, velocity, acceleration
 #         vs time. Mark the true -9.81 line on the acceleration panel.
 #         Save it as motion.png
+
+fig, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True, figsize=(8, 10))
+
+# Top panel: Position
+ax1.plot(t, y, color="blue")
+ax1.set_ylabel("Position (m)")
+ax1.set_title("Object Motion over Time")
+
+# Middle panel: Velocity
+ax2.plot(t, v, color="orange")
+ax2.set_ylabel("Velocity (m/s)")
+
+# Bottom panel: Acceleration
+ax3.plot(t, a, color="green", label="Measured")
+ax3.axhline(-9.81, color="red", linestyle="--", label="-9.81 m/s²") # Dashed line for expected gravity
+ax3.set_xlabel("Time (s)")
+ax3.set_ylabel("Acceleration (m/s²)")
+ax3.legend()
+
+plt.tight_layout()
+plt.savefig("motion.png")

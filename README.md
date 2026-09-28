@@ -32,3 +32,11 @@ push,branch,add.Also i wrote test using pytest and saw how much numpy is faster
 Report:
  - Data Observation: The scatter plot of observerd data matches with the analytical decay law
  - Automation: I built snakemake file automates plotting process and rebuilds the figure only when the input data or script changes
+
+
+
+## PW2 - Lab A: Motion from Tracking Data
+Report:
+- Mean Acceleration: I got -8.58 m/s²
+- Noise Observation: The acceleration is extremely noisy because taking two derivatives  magnifies the small measurement errors present in the original position data
+- Integration Result:By integrating the  acceleration  back to position, I recovered  original position with a max difference of only 0.78 m
