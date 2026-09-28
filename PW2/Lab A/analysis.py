@@ -65,3 +65,28 @@ ax3.legend()
 
 plt.tight_layout()
 plt.savefig("motion.png")
+
+
+# --- Bonus: 2D Tracked Trajectory ---
+
+t_traj, x, y = np.loadtxt("trajectory.csv", delimiter=",", skiprows=1, unpack=True)
+vx = np.gradient(x, t_traj)
+vy = np.gradient(y, t_traj)
+speed = np.sqrt(vx**2 + vy**2)
+
+# Create a 1x2 figure for the bonus plots
+fig2, (ax_path, ax_speed) = plt.subplots(1, 2, figsize=(10, 4))
+
+# Left panel: Plot the 2D path
+ax_path.plot(x, y, color="purple")
+ax_path.set_title("2D Path")
+ax_path.set_xlabel("x (m)")
+ax_path.set_ylabel("y (m)")
+
+ax_speed.plot(t_traj, speed, color="teal")
+ax_speed.set_title("Speed over Time")
+ax_speed.set_xlabel("Time (s)")
+ax_speed.set_ylabel("Speed (m/s)")
+
+plt.tight_layout()
+plt.savefig("trajectory.png")
