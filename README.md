@@ -38,5 +38,16 @@ Report:
 ## PW2 - Lab A: Motion from Tracking Data
 Report:
 - Mean Acceleration: I got -8.58 m/s²
-- Noise Observation: The acceleration is extremely noisy because taking two derivatives  magnifies the small measurement errors present in the original position data
+- Noise Observation: The acceleration is extremely noisy because taking two derivatives    small  errors present in the original position data
 - Integration Result:By integrating the  acceleration  back to position, I recovered  original position with a max difference of only 0.78 m
+
+## PW2 - Lab B
+
+ # Part 2: Three routes to a minimum
+ - do the methods agree?:All methods found the minimum for f(x),but not for g(x). in g(x) success depended on algorithm and starting point
+ - Did Newton land on a minimum or another stationary point?:
+ when starting from  x=0 on g(x)  newton found a local maximum instead of a minimum
+ - how did the starting point change the result?:Changing the starting point changed where the algorithms ended up. in hard function
+
+# Part 5: Titration equivalence point
+- by calculating the maximum slope  of the titration curve using `np.gradient`,  equivalence point was found to be at  50 mL
