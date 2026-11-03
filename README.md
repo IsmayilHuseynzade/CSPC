@@ -51,3 +51,49 @@ Report:
 
 # Part 5: Titration equivalence point
 - by calculating the maximum slope  of the titration curve using `np.gradient`,  equivalence point was found to be at  50 mL
+
+
+## PW3
+
+# Session 1: Characterising the Data
+
+1. Load the data with pandas
+i loaded succesfully using pandas
+
+2. The shape of each variable
+
+
+
+age: The distribution is nearly symmetric and bell-shaped, peaking around the late 50s.
+
+cholestorol:  distribution is left-skewed. the majority of patients are clustered in a normal to high range
+
+Resting Blood Pressure: shows  slight right skew. most values are clustered around 120-140 , but  few patients has much higher
+
+Thalach:   distribution left-skewed. 
+
+3. Are they normally distributed?
+
+Age:
+
+Verdict: Approximately Normal.
+
+Reasoning: Visually, it resembles a bell curve closely enough to assume normality for many statistical methods, though strict numerical tests might indicate minor deviations.
+
+Chol:
+
+Verdict: Not Normal.
+
+Reasoning: The distinct right-skew and heavy tail rule out a strict normal distribution.
+
+Trestbps:
+
+Verdict: Not Normal.
+
+Reasoning: The presence of a rightward skew and high-end outliers indicates it deviates from a symmetric normal curve.
+
+Thalach:
+
+Verdict: Not Normal.
+
+Reasoning: The distribution is noticeably left-skewed, which violates the symmetry required for a normal distribution.
