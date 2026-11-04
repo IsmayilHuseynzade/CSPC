@@ -74,26 +74,14 @@ Thalach:   distribution left-skewed.
 
 3. Are they normally distributed?
 
-Age:
+Verdict: None of the four continuous variables (age, chol, trestbps, thalach) are normally distributed.
 
-Verdict: Approximately Normal.
+Reasoning: Visual inspection of the histograms reveals that chol, trestbps, and thalach are heavily skewed, while age has multiple peaks rather than a perfect bell curve. This visual evidence is confirmed numerically by the Shapiro-Wilk test, which returned a p-value < 0.05 for all four variables, indicating a statistically significant departure from normality.
 
-Reasoning: Visually, it resembles a bell curve closely enough to assume normality for many statistical methods, though strict numerical tests might indicate minor deviations.
+## Session 2 Findings
 
-Chol:
+Task 4 (Heart Rate): Used the Mann-Whitney U test due to non-normal data. Heart disease patients have a significantly lower max heart rate (Healthy mean: [Mean]±[SE], Disease mean: [Mean]±[SE], p=[p-val]).
 
-Verdict: Not Normal.
+Task 5 (Age Correlation): Used Spearman correlation. Age and max heart rate are negatively correlated; as age increases, max heart rate decreases (r=[r-val], p=[p-val]).
 
-Reasoning: The distinct right-skew and heavy tail rule out a strict normal distribution.
-
-Trestbps:
-
-Verdict: Not Normal.
-
-Reasoning: The presence of a rightward skew and high-end outliers indicates it deviates from a symmetric normal curve.
-
-Thalach:
-
-Verdict: Not Normal.
-
-Reasoning: The distribution is noticeably left-skewed, which violates the symmetry required for a normal distribution.
+Tasks 6 & 7 (Chemical Mystery): Naively, [Chemical 1] seemed like the cause. However, after controlling for pollution_index (filtering for 40-60), [Chemical 2] is the actual cause. Its correlation remained strong at [r-val], while [Chemical 1] dropped to [r-val], showing it was just a confounding variable.
